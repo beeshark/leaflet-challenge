@@ -11,6 +11,15 @@
 // legend that gives context for map data
 
 var myMap = L.map("mapid",{
-    center: [45, -95], //change later
+    center: [45, -95], //change later??
     zoom: 5
 });
+
+L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+    tileSize: 512,
+    maxZoom: 18,
+    zoomOffset: -1,
+    id: "light-v10",
+    accessToken: API_KEY
+}).addTo(myMap);
