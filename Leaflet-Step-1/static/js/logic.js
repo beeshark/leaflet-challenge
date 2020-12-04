@@ -9,3 +9,4 @@
 // popups that give add info about the eq when marker is clicked
 
 // legend that gives context for map data
+
