@@ -10,3 +10,7 @@
 
 // legend that gives context for map data
 
+var myMap = L.map("mapid",{
+    center: [45, -95], //change later
+    zoom: 5
+});
