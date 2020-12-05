@@ -50,6 +50,7 @@ function createCircleMarker(feature, latlng ){
         fillColor: getColor(feature.properties.magnitude),
         weight: 1,
         opacity: 1,
+        color: yellow,
         fillOpacity: 0.8
       }
       return L.circleMarker( latlng, markerOptions );
