@@ -21,8 +21,8 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     accessToken: API_KEY
 })
 
-var myMap = L.map("mapid",{
-    center: [45, -95], //change later??
+var myMap = L.map("map-id",{
+    center: [37.09, -95.71], //change later??
     zoom: 5
 });
 
