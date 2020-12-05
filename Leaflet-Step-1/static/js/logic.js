@@ -62,10 +62,10 @@ function magColor(magnitude) {
         return 'lightgreen'
     } else if (magnitude > 3){
         return 'yellow'
+    } else if (magnitude > 4){
+        return 'orange'
+    } else if (magnitude > 5){
+        return 'red'
     }
 }
 
-    earthquakes.array.forEach(_earthquake => {
-        L.marker([_earthquake.latlng])
-            .bindPopup("<h1>Magnitude</h1>" + features.properties.magnitude)
-    });
