@@ -10,8 +10,6 @@
 
 // legend that gives context for map data
 
-
-    
 var myMap = L.map("map-id",{
     center: [37.09, -95.71],
     zoom: 5
