@@ -66,4 +66,3 @@ function magColor(magnitude) {
         return 'red'
     }
 }
-
