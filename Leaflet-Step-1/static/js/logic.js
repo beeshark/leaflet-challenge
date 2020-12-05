@@ -17,7 +17,7 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     tileSize: 512,
     maxZoom: 18,
     zoomOffset: -1,
-    id: "light-v10",
+    id: "mapbox.light",
     accessToken: API_KEY
 })
 
