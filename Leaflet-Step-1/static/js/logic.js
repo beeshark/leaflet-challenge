@@ -40,10 +40,14 @@ function createMap(earthquakesData) {
     })
 }
 
+function markerSize(magnitude) {
+    return magnitude * 10000;
+}
+
 function createCircleMarker(feature, latlng ){
       var markerOptions = {
-        radius: markerSize(feature.properties.mag),
-        fillColor: getColor(feature.properties.mag),
+        radius: markerSize(feature.properties.magnitude),
+        fillColor: getColor(feature.properties.magnitude),
         weight: 1,
         opacity: 1,
         fillOpacity: 0.8
