@@ -36,9 +36,8 @@ var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{
     accessToken: API_KEY
 });
 
-earthquakes.forEach(
-    L.marker([earthquakes.lat, earthquakes.lng])
-)
+
+
 
 lightmap.addTo(myMap)
 
