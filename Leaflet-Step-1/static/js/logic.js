@@ -12,20 +12,21 @@
 
 const link = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
 
-
+d3.json(link, function(earthquakes) {
+    console.log(earthquakes);
+    
+var myMap = L.map("map-id",{
+    center: [37.09, -95.71],
+    zoom: 5
+});
 
 var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     tileSize: 512,
     maxZoom: 18,
     zoomOffset: -1,
-    id: "mapbox.light",
+    id: "light-v10",
     accessToken: API_KEY
 })
 
-var myMap = L.map("map-id",{
-    center: [37.09, -95.71], //change later??
-    zoom: 5
-});
-
-lightmap.addTo(myMap);
+lightmap.addTo(myMap)})
