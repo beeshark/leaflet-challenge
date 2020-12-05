@@ -50,8 +50,22 @@ function createCircleMarker(feature, latlng ){
         fillColor: getColor(feature.properties.magnitude),
         weight: 1,
         opacity: 1,
-        color: yellow,
         fillOpacity: 0.8
       }
       return L.circleMarker( latlng, markerOptions );
     };
+
+function magColor(magnitude) {
+    if (magnitude > 1 ){
+        return 'green'
+    } else if (magnitude > 2){
+        return 'lightgreen'
+    } else if (magnitude > 3){
+        return 'yellow'
+    }
+}
+
+    earthquakes.array.forEach(_earthquake => {
+        L.marker([_earthquake.latlng])
+            .bindPopup("<h1>Magnitude</h1>" + features.properties.magnitude)
+    });
